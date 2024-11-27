@@ -3,16 +3,24 @@ import Link from "next/link";
 export const Footer1 = () => {
   const navigationItems = [
     {
-      title: "Product",
-      description: "Transform playtime into a musical adventure",
+      title: "",
+      description: "",
       items: [
+        {
+          title: "Preorder",
+          href: "/preorder",
+        },
+        {
+          title: "Demo",
+          href: "/demo",
+        },
         {
           title: "Features",
           href: "/features",
         },
         {
-          title: "Contact",
-          href: "/contact",
+          title: "Support",
+          href: "/support",
         },
       ],
     },
@@ -22,7 +30,7 @@ export const Footer1 = () => {
     <footer className="w-full py-10 bg-foreground text-background">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-3 gap-10">
-          {/* Company Info */}
+          {/* Company Info - Left aligned */}
           <div className="flex gap-8 flex-col">
             <div className="flex gap-2 flex-col">
               <h2 className="text-3xl tracking-tighter font-regular text-[#7EB9B2]">
@@ -41,9 +49,15 @@ export const Footer1 = () => {
             </div>
           </div>
 
-          {/* Navigation Sections */}
+          {/* Empty middle column for spacing */}
+          <div></div>
+
+          {/* Navigation Sections - Right aligned */}
           {navigationItems.map((section) => (
-            <div key={section.title} className="flex flex-col gap-4">
+            <div
+              key={section.title}
+              className="flex flex-col gap-4 lg:items-end text-right"
+            >
               <div>
                 <h3 className="text-lg font-medium">{section.title}</h3>
                 <p className="text-sm text-background/75">
@@ -71,26 +85,6 @@ export const Footer1 = () => {
           <div className="flex flex-col md:flex-row justify-between gap-4">
             <div className="text-sm text-background/75">
               © 2024 PupStrings. All rights reserved.
-            </div>
-            <div className="flex gap-6">
-              <Link
-                href="/terms"
-                className="text-sm text-background/75 hover:text-background"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="/privacy"
-                className="text-sm text-background/75 hover:text-background"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/returns"
-                className="text-sm text-background/75 hover:text-background"
-              >
-                Return Policy
-              </Link>
             </div>
           </div>
         </div>

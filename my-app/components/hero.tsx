@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { MoveRight, PhoneCall } from "lucide-react";
+import Link from "next/link";
+import { MoveRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -26,15 +27,19 @@ export const Hero3 = () => (
             </p>
           </div>
           <div className="flex flex-row gap-4">
-            <Button size="lg" className="gap-4" variant="outline">
-              Watch Demo <PhoneCall className="w-4 h-4" />
-            </Button>
-            <Button
-              size="lg"
-              className="gap-4 bg-[#7EB9B2] hover:bg-[#7EB9B2]/90"
-            >
-              Pre-order Now <MoveRight className="w-4 h-4" />
-            </Button>
+            <Link href="/demo">
+              <Button size="lg" className="gap-4" variant="outline">
+                Watch Demo
+              </Button>
+            </Link>
+            <Link href="/preorder">
+              <Button
+                size="lg"
+                className="gap-4 bg-[#7EB9B2] hover:bg-[#7EB9B2]/90"
+              >
+                Pre-order Now <MoveRight className="w-4 h-4" />
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="relative rounded-md aspect-square overflow-hidden">

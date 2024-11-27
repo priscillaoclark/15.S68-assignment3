@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Header1 = () => {
     const navigationItems = [
         {
@@ -5,36 +7,12 @@ export const Header1 = () => {
             href: "/",
         },
         {
-            title: "Features",
-            href: "/features",
-            items: [
-                {
-                    title: "Canine-Adapted Design",
-                    href: "/features#design",
-                    description:
-                        "Specially designed with paw-friendly strumming pads",
-                },
-                {
-                    title: "Smart App Integration",
-                    href: "/features#app",
-                    description: "AI-powered feedback and progress tracking",
-                },
-                {
-                    title: "Training Program",
-                    href: "/features#training",
-                    description:
-                        "Step-by-step learning with professional support",
-                },
-                {
-                    title: "Success Stories",
-                    href: "/features#stories",
-                    description: "Real stories from our furry musicians",
-                },
-            ],
+            title: "Demo",
+            href: "/demo",
         },
         {
-            title: "Shop",
-            href: "/shop",
+            title: "Features",
+            href: "/features",
         },
         {
             title: "Support",
@@ -43,21 +21,31 @@ export const Header1 = () => {
     ];
 
     return (
-        <header className="w-full py-4 border-b">
+        <header className="sticky top-0 z-50 w-full py-4 bg-gradient-to-r from-[#7EB9B2] via-[#9CC5BE] to-[#B8D1CC] shadow-md backdrop-blur-sm bg-opacity-90">
             <div className="container mx-auto flex justify-between items-center">
                 <div className="flex items-center gap-8">
-                    <h1 className="text-xl font-semibold">PupStrings™</h1>
+                    <h1 className="text-xl font-semibold text-white hover:text-opacity-90 transition-colors">
+                        PupStrings™
+                    </h1>
                     <nav className="hidden md:flex gap-6">
                         {navigationItems.map((item) => (
-                            <a
+                            <Link
                                 key={item.title}
                                 href={item.href}
-                                className="text-sm hover:text-primary transition-colors"
+                                className="text-sm text-white hover:text-opacity-75 transition-colors font-medium relative group"
                             >
                                 {item.title}
-                            </a>
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                            </Link>
                         ))}
                     </nav>
+                </div>
+                <div className="hidden md:flex items-center gap-4">
+                    <Link href="/preorder">
+                        <button className="px-4 py-2 text-sm text-[#7EB9B2] bg-white rounded-md hover:bg-opacity-90 transition-colors">
+                            Preorder
+                        </button>
+                    </Link>
                 </div>
             </div>
         </header>
