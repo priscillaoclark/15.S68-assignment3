@@ -1,36 +1,52 @@
+import Image from "next/image";
 import { MoveRight, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export const Hero3 = () => (
-  <div className="w-full  py-20 lg:py-40">
+  <div className="w-full pt-20">
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2">
         <div className="flex gap-4 flex-col">
           <div>
-            <Badge variant="outline">We&apos;re live!</Badge>
+            <Badge className="bg-[#7EB9B2] text-white hover:bg-[#7EB9B2]/90">
+              Revolutionary Pet Innovation!
+            </Badge>
           </div>
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
-              This is the start of something!
+              Unleash Your Dog's <span className="text-[#7EB9B2]">Musical</span>{" "}
+              Talent
             </h1>
             <p className="text-xl leading-relaxed tracking-tight text-muted-foreground max-w-md text-left">
-              Managing a small business today is already tough. Avoid further
-              complications by ditching outdated, tedious trade methods. Our
-              goal is to streamline SMB trade, making it easier and faster than
-              ever.
+              PupStrings is the world's first canine guitar learning kit,
+              combining cutting-edge technology with pet-friendly design to
+              teach your dog the joy of making music. Transform playtime into a
+              musical adventure!
             </p>
           </div>
           <div className="flex flex-row gap-4">
             <Button size="lg" className="gap-4" variant="outline">
-              Jump on a call <PhoneCall className="w-4 h-4" />
+              Watch Demo <PhoneCall className="w-4 h-4" />
             </Button>
-            <Button size="lg" className="gap-4">
-              Sign up here <MoveRight className="w-4 h-4" />
+            <Button
+              size="lg"
+              className="gap-4 bg-[#7EB9B2] hover:bg-[#7EB9B2]/90"
+            >
+              Pre-order Now <MoveRight className="w-4 h-4" />
             </Button>
           </div>
         </div>
-        <div className="bg-muted rounded-md aspect-square"></div>
+        <div className="relative rounded-md aspect-square overflow-hidden">
+          <Image
+            src="/images/product_image.jpg"
+            alt="PupStrings Canine Guitar Kit"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+          />
+        </div>
       </div>
     </div>
   </div>

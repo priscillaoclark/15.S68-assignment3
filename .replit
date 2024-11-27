@@ -1,11 +1,32 @@
-run = "npm run dev"
-modules = ["nodejs-20"]
+run = "cd my-app && npm install && npm run dev -- -p 3000"
+modules = ["nodejs-20:v8-20230920-bd784b9"]
+
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "npm run dev"]
+run = ["sh", "-c", "cd my-app && npm install && npm run build && npm run start"]
+deploymentTarget = "cloudrun"
 
 [[ports]]
 localPort = 3000
 externalPort = 80
+
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
+syntax = "javascript"
+
+[languages.javascript.languageServer]
+start = ["typescript-language-server", "--stdio"]
+
+[env]
+PATH = "/home/runner/$REPL_SLUG/my-app/node_modules/.bin:/home/runner/$REPL_SLUG/node_modules/.bin:${PATH}"
+npm_config_prefix = "/home/runner/$REPL_SLUG/.npm-packages"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+enabledForHosting = false
