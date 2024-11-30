@@ -10,12 +10,19 @@ PupStrings is an innovative pet product that transforms playtime into a musical 
 - **Built-in Rewards**: Treat dispenser system for positive reinforcement
 - **Community Access**: Connect with other musical pet owners
 
+## Chat Functionality
+PupStrings includes an integrated chat feature that serves as a customer service chatbot. This chatbot is designed to assist users by answering common queries about the PupStrings product. 
+
 ## Tech Stack
 
 - Next.js 14
 - TypeScript
 - Tailwind CSS
 - Radix UI Components
+- [Shadcn](https://ui.shadcn.com) - A library for building fully accessible design systems
+  
+## External Resources
+- **TWBLOCKS**: Explore [TWBLOCKS](https://www.twblocks.com/?ref=horizon-ui.com) for additional design inspiration and resources.
 
 ## Getting Started
 

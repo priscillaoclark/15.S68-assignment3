@@ -1,8 +1,10 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Header1 } from "@/components/header";
 import { Footer1 } from "@/components/footer";
+import Chat from "@/components/chat"; // Import the Chat component
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,6 +34,10 @@ export default function RootLayout({
       >
         <Header1 />
         <main>{children}</main>
+
+        {/* Chat component at the bottom */}
+        <Chat />
+
         <Footer1 />
       </body>
     </html>
