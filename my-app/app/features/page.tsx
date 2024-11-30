@@ -115,6 +115,10 @@ export default function FeaturesPage() {
                   in just two weeks! The treat-based reward system really helped
                   keep him motivated." - Sarah P., Dog Parent
                 </p>
+                <audio controls>
+                  <source src="/audio/1.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio tag.
+                </audio>
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-medium">
@@ -126,6 +130,10 @@ export default function FeaturesPage() {
                   performed at our local dog park!" - James R., Professional Dog
                   Trainer
                 </p>
+                <audio controls>
+                  <source src="/audio/2.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio tag.
+                </audio>
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-medium">
@@ -137,6 +145,10 @@ export default function FeaturesPage() {
                   PupStrings. The musical interaction has become a form of
                   therapy for him." - Dr. Emily C., Veterinary Behaviorist
                 </p>
+                <audio controls>
+                  <source src="/audio/3.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio tag.
+                </audio>
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-medium">
@@ -148,6 +160,10 @@ export default function FeaturesPage() {
                   transferred to other aspects of her life. She's like a
                   different dog now!" - Michael T., Rescue Dog Parent
                 </p>
+                <audio controls>
+                  <source src="/audio/4.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio tag.
+                </audio>
               </div>
             </div>
           </div>
